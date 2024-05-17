@@ -30,7 +30,7 @@ def gpt_35_api_stream(messages: list):
         messages (list): 完整的对话消息
     """
     stream = client.chat.completions.create(
-        model='gpt-3.5-turbo',
+        model='gpt-4',
         messages=messages,
         stream=True,
     )
