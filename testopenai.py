@@ -9,6 +9,11 @@ client = OpenAI(
 
 # client = OpenAI(
 #     # defaults to os.environ.get("OPENAI_API_KEY")
+#     api_key="sk-zKs3eVUnmpT281l1bs6CdFPUaabv0ocMSonmH9FekGftF5hZ"
+# )
+
+# client = OpenAI(
+#     # defaults to os.environ.get("OPENAI_API_KEY")
 #     api_key=os.getenv('OPENAI_API_KEY'),
 #     base_url="https://api.chatanywhere.tech/v1"
 # )

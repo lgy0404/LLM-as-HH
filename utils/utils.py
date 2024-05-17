@@ -11,8 +11,10 @@ def init_client(cfg):
     global client
     if cfg.model.startswith("gpt"):
         from openai import OpenAI
-        assert os.getenv('OPENAI_API_KEY') is not None, "Please set the environment variable OPENAI_API_KEY"
-        client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+        # assert os.getenv('OPENAI_API_KEY') is not None, "Please set the environment variable OPENAI_API_KEY"
+        client = OpenAI(api_key="sk-zKs3eVUnmpT281l1bs6CdFPUaabv0ocMSonmH9FekGftF5hZ",
+                        base_url="https://api.chatanywhere.tech/v1"
+                        )
     elif cfg.model.startswith("GLM"):
         from zhipuai import ZhipuAI 
         assert os.getenv('ZHIPU_AI_API_KEY') is not None, "Please set the environment variable ZHIPU_AI_API_KEY"
