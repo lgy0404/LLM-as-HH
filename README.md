@@ -10,21 +10,19 @@
 * 2. [ Introduction 🚀](#Introduction)
 * 3. [ Exciting Highlights 🌟](#ExcitingHighlights)
 * 4. [ Usage 🔑](#Usage)
-		* 4.1. [Dependency](#Dependency)
-		* 4.2. [To run ReEvo](#TorunReEvo)
-		* 4.3. [Available problems](#Availableproblems)
-		* 4.4. [Simple steps to apply ReEvo to your problem](#SimplestepstoapplyReEvotoyourproblem)
+     * 4.1. [Dependency](#Dependency)
+     * 4.2. [To run ReEvo](#TorunReEvo)
+     * 4.3. [Available problems](#Availableproblems)
+     * 4.4. [Simple steps to apply ReEvo to your problem](#SimplestepstoapplyReEvotoyourproblem)
 * 5. [ Citation 🤩](#Citation)
 * 6. [ Acknowledgments 🫡](#Acknowledgments)
 
-
-##  1. <a name='News'></a> News 📰
+## 1. `<a name='News'></a>` News 📰
 
 - **Apr 2024**: Added use cases for Neural Combinatorial Optimization (NCO) and Electronic Design Automation (EDA). The paper will be updated soon.
 - **Feb 2024**: We are excited to release ReEvo! 🚀
 
-
-##  2. <a name='Introduction'></a> Introduction 🚀
+## 2. `<a name='Introduction'></a>` Introduction 🚀
 
 ![Diagram of ReEvo](./assets/reevo.jpg)
 
@@ -32,10 +30,10 @@ We introduce **Language Hyper-Heuristics (LHHs)**, an emerging variant of Hyper-
 
 To empower LHHs, we present **Reflective Evolution (ReEvo)**, a generic searching framework that emulates the reflective design approach of human experts while much surpassing human capabilities with its scalable LLM inference, Internet-scale domain knowledge, and powerful evolutionary search.
 
-
-##  3. <a name='ExcitingHighlights'></a> Exciting Highlights 🌟
+## 3. `<a name='ExcitingHighlights'></a>` Exciting Highlights 🌟
 
 We can improve the following types of algorithms:
+
 - Neural Combinatorial Optimization (NCO)
 - Genetic Algorithm (GA)
 - Ant Colony Optimization (ACO)
@@ -43,6 +41,7 @@ We can improve the following types of algorithms:
 - Constructive Heuristics
 
 on the following problems:
+
 - Traveling Salesman Problem (TSP)
 - Capacitated Vehicle Routing Problem (CVRP)
 - Orienteering Problem (OP)
@@ -52,14 +51,15 @@ on the following problems:
 
 with both black-box and white-box settings.
 
-##  4. <a name='Usage'></a> Usage 🔑
+## 4. `<a name='Usage'></a>` Usage 🔑
 
 - Set your LLM API key (OpenAI API, ZhiPu API, Llama API) [here](https://github.com/ai4co/LLM-as-HH/blob/5fa30b9da3ecb80b8a658352d26df08893f88a6c/utils/utils.py#L9-L27) or as an environment variable.
+  - OPENAI_API_KEY =
 - Running logs and intermediate results are saved in `./outputs/main/` by default.
 - Datasets are generated on the fly.
 - Some test notebooks are provided in `./problems/*/test.ipynb`.
 
-####  4.1. <a name='Dependency'></a>Dependency
+#### 4.1. `<a name='Dependency'></a>`Dependency
 
 - Python >= 3.11
 - openai >= 1.0.0
@@ -74,15 +74,17 @@ Problem-specific dependencies:
 - `cvrp_aco(_black_box)` / `mkp_aco(_black_box)` / `op_aco(_black_box)` / `NCO`: pytorch
 - `tsp_gls`: numba==0.58
 
+#### 4.2. `<a name='TorunReEvo'></a>`To run ReEvo
 
-####  4.2. <a name='TorunReEvo'></a>To run ReEvo
 ```bash
 # e.g., for tsp_aco
 python main.py problem=tsp_aco
 ```
+
 Check out `./cfg/` for more options.
 
-####  4.3. <a name='Availableproblems'></a>Available problems
+#### 4.3. `<a name='Availableproblems'></a>`Available problems
+
 - Traveling Salesman Problem (TSP): `tsp_aco`, `tsp_aco_black_box`, `tsp_constructive`, `tsp_gls`, `tsp_pomo`, `tsp_lehd`
 - Capacitated Vehicle Routing Problem (CVRP): `cvrp_aco`, `cvrp_aco_black_box`, `cvrp_pomo`, `cvrp_lehd`
 - Bin Packing Problem (BPP): `bpp_offline_aco`, `bpp_offline_aco_black_box`, `bpp_online`
@@ -90,14 +92,13 @@ Check out `./cfg/` for more options.
 - Orienteering Problem (OP): `op_aco`, `op_aco_black_box`
 - Decap Placement Problem (DPP): `dpp_ga`
 
-####  4.4. <a name='SimplestepstoapplyReEvotoyourproblem'></a>Simple steps to apply ReEvo to your problem
+#### 4.4. `<a name='SimplestepstoapplyReEvotoyourproblem'></a>`Simple steps to apply ReEvo to your problem
 
 - Define your problem in `./cfg/problem/`.
 - Generate problem instances and implement the evaluation pipeline in `./problems/`.
 - Add function_description, function_signature, and seed_function in `./prompts/`.
 
-
-##  5. <a name='Citation'></a> Citation 🤩
+## 5. `<a name='Citation'></a>` Citation 🤩
 
 If you encounter any difficulty using our code, please do not hesitate to submit an issue or directly contact us! If you find our work helpful (or if you would be so kind as to offer us some encouragement), please consider kindly giving us a star, and citing our paper.
 
@@ -112,10 +113,12 @@ If you encounter any difficulty using our code, please do not hesitate to submit
 }
 ```
 
-##  6. <a name='Acknowledgments'></a> Acknowledgments 🫡
+## 6. `<a name='Acknowledgments'></a>` Acknowledgments 🫡
+
 We are very grateful to [Federico Berto](https://github.com/fedebotu), [Yuan Jiang](https://github.com/jiang-yuan), [Yining Ma](https://github.com/yining043), [Chuanbo Hua](https://github.com/cbhua), and [AI4CO community](https://github.com/ai4co) for valuable discussions and feedback.
 
 Also, our work is built upon the following projects, among others:
+
 - [DeepACO: Neural-enhanced Ant Systems for Combinatorial Optimization](https://github.com/henry-yeh/DeepACO)
 - [Eureka: Human-Level Reward Design via Coding Large Language Models](https://github.com/eureka-research/Eureka)
 - [Algorithm Evolution Using Large Language Model](https://arxiv.org/abs/2311.15249)
