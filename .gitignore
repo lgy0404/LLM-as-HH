@@ -172,3 +172,4 @@ venv
 *.DS_Store
 exp/*
 ablation/*
+problems/cvrp_pomo/CVRPModel.py.baiduyun.uploading.cfg

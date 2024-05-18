@@ -79,6 +79,7 @@ Problem-specific dependencies:
 ```bash
 # e.g., for tsp_aco
 python main.py problem=tsp_aco
+python main.py problem=tsp_aco timeout==1000
 ```
 
 Check out `./cfg/` for more options.
